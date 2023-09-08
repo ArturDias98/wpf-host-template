@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HostTemplate"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        ResizeMode="NoResize"
+        Height="250"
+        Width="350">
     <Grid>
-
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Hello,"
+                       Margin="5"
+                       FontSize="18" />
+            <StackPanel Margin="5">
+                <TextBlock Text="{Binding UserName}"
+                           FontSize="18" />
+                <TextBlock Text="{Binding Email}"
+                           FontStyle="Oblique"
+                           FontSize="16" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
